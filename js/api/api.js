@@ -1,0 +1,1 @@
+ export const api = "https://kimkar88.no/wp-json/wp/v2/posts";

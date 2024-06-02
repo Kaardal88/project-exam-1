@@ -1,0 +1,24 @@
+.posts-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10%;
+   
+}
+
+
+.posts-content{
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.blogpost-infotext{
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    
+}
