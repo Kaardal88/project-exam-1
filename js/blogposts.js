@@ -8,14 +8,14 @@ async function getPosts() {
         if (!response.ok) {
             throw new Error('Oops! There was an error.');
         }
-        const posts = await response.json(); 
+        const posts = await response.json();
         createHTML(posts);
     } catch (error) {
         console.log(error);
         if (blogPostElement) {
             const errorDiv = document.createElement('div');
             errorDiv.textContent = `Error: ${error.message}`;
-            errorDiv.style.color = 'red'; 
+            errorDiv.style.color = 'red';
             blogPostElement.appendChild(errorDiv);
         }
     }
@@ -28,7 +28,7 @@ async function getThumbnail(mediaId) {
             throw new Error('Error fetching thumbnail');
         }
         const media = await response.json();
-        return media.source_url; // Adjust this according to your API response
+        return media.source_url;
     } catch (error) {
         console.log(error);
         return null;
