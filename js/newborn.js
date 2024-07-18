@@ -27,7 +27,7 @@ async function getThumbnail(mediaId) {
             throw new Error('Error fetching thumbnail');
         }
         const media = await response.json();
-        return media.source_url;
+        return media.guid.rendered;
     } catch (error) {
         console.log(error);
         return null;
@@ -49,14 +49,14 @@ function contentBuilder(post, showAll) {
 }
 
 async function appendPostToSection(post) {
-    console.log(post); // Log the post object to see its structure
+    console.log(post);
 
     const titleElement = document.createElement('h2');
-    titleElement.textContent = post.title.rendered; // Adjust based on actual structure
+    titleElement.textContent = post.title.rendered;
     newbornSection.appendChild(titleElement);
 
     const bodyElement = document.createElement('p');
-    bodyElement.textContent = post.body; // Adjust based on actual structure
+    bodyElement.textContent = post.body;
     newbornSection.appendChild(bodyElement);
 
     const thumbnailUrl = await getThumbnail(post.featured_media);
