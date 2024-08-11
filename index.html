@@ -16,9 +16,13 @@
     <link href="/css/carousel.css" rel="stylesheet">
     <script src="/js/nextBtn.js" defer></script>
     <script src="/js/newborn.js" type="module" defer></script>
+    <script src="/js/carousel.js" type="module" defer></script>
+    <script src="/js/blog.js" type="module" defer></script>
+    <script src="/js/lightmode.js"></script>
 </head>
 <header>
-    <img class="blog-logo" src="/images/devbula_logo.png" alt="Blog Logo">
+    <img class="blog-logo" src="/images/devbula-logo.svg" alt="Blog Logo">
+    <h3 class="header-h3"><i>Gain knowledge for new stuff</i></h3>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -31,33 +35,54 @@
 
 <body>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1><div class="hero-text">Welcome to Devbula!<br>
-            A blog for exploring and learning about tech and development</div></h1>
-            <div class="glow-element"></div>
-           <!--  <img src="/images/Skjermbilde 2024-06-15 223103.jpg"> -->
-        </div>
+    <div class="light-mode" id="light-mode">
+        <button class="let-there-be-light" id="toggle-light-mode">Hit The Lights</button>
     </div>
 
-    <section class="carousel">
-        <div id="carousel-inner" class="carousel-inner">
-            <div class="carousel-item">
-
+    <div class="hero">
+        <div class="hero-content">
+            <h1>
+                <div class="hero-text">Welcome to Devbula!<br>
+                    A blog for exploring and learning<br> about tech and development</div>
+            </h1>
+            <div class="glow-element"></div>
+        </div>
+    </div>
+    <section class="news">
+        <div class="news-title">
+        <h1>NewBorn</h1></div>
+        <div class="news-content">
+            <div class="news-text" id="newborn-section">
             </div>
         </div>
-        <div class="carousel-controls">
-            <button id="prev">‹</button>
-            <button id="next">›</button>
-        </div>
     </section>
 
-    <section class="news">
+    <div class="blog-container">
+        <h2 class="blog-content-info">FRESH BLOGPOSTS</h2>
+        <div class="posts" id="posts"></div>
 
-        <h1 class="news-title">NewBorn</h1>
-        <div class="news-text" id="newborn-section">
+    </div>
+    <div class="navigation">
+        <button class="button-p-n" id="prev">
+            < </button>
+                <button class="button-p-n" id="next">></button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-img">
+                    <img src="/images/devbula-logo.svg">
+                </div>
+                <div class="footer-info">
+                    <a href=""><p id="footer-p">Contact</p></a>
+                    <a href=""><p id="footer-p">About</p></a>
+                    <a href=""><p id="footer-p">Address</p></a>
+                </div>
+            </div>
         </div>
-    </section>
+    </footer>
+
 
 </body>
 

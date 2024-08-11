@@ -1,4 +1,4 @@
-const carouselInner = document.querySelector('.carousel-inner');
+/* const carouselInner = document.querySelector('.carousel-inner');
 const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
 let offset = 0;
@@ -15,7 +15,7 @@ prevButton.addEventListener('click', () => {
         offset += 100;
         carouselInner.style.transform = `translateX(${offset}%)`;
     }
-});
+}); */
 
 // Get all blogposts (sorter etter dato)
 // const carousel = document.getElementById("carousel-inner")

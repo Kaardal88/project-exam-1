@@ -35,10 +35,11 @@ async function getThumbnail(mediaId) {
 }
 
 async function createHTML(post) {
-    newbornSection.className = "news-text";
+    newbornSection.classList = "news-text";
     newbornSection.innerHTML = '';
     await appendPostToSection(post);
 }
+
 
 function contentBuilder(post, showAll) {
     if (showAll === true) {
@@ -52,8 +53,7 @@ async function appendPostToSection(post) {
     console.log(post);
 
     const titleElement = document.createElement('h2');
-    titleElement.textContent = post.title.rendered;
-    newbornSection.appendChild(titleElement);
+
 
     const bodyElement = document.createElement('p');
     bodyElement.textContent = post.body;
@@ -66,7 +66,7 @@ async function appendPostToSection(post) {
     div.innerHTML = `
         <div>
             <h3>
-                <a href="/blogspecific.html?id=${post.id}&title=${encodeURIComponent(post.title)}">
+                <a href="/blog.html?id=${post.id}&title">
                     ${post.title.rendered}
                 </a>
             </h3>
@@ -74,24 +74,42 @@ async function appendPostToSection(post) {
             <div class="news-text">${contentBuilder(post, showAllContent)}</div>
         </div>
     `;
+
+
+
     const button = document.createElement('button');
     button.textContent = 'Read More';
+
+    button.classList.add('read-more-button');
+
     button.onclick = function () {
-        showAllContent = true;
+        showAllContent = !showAllContent;
+
+        if (showAllContent) {
+            button.textContent = 'Read Less';
+        } else {
+            button.textContent = 'Read More';
+        }
+
         div.innerHTML = `
-        <div>
-            <h3>
-                <a href="/blogspecific.html?id=${post.id}&title=${encodeURIComponent(post.title)}">
-                    ${post.title.rendered}
-                </a>
-            </h3>
-            <img src="${thumbnailUrl}" alt="Thumbnail">
-            <div class="news-text">${contentBuilder(post, showAllContent)}</div>
-        </div>
+    <div>
+        <h3>
+            <a href="/blog.html?id=${post.id}&title=${encodeURIComponent(post.title)}">
+                ${post.title.rendered}
+            </a>
+        </h3>
+        <img src="${thumbnailUrl}" alt="Thumbnail">
+        
+        <div class="news-text">${contentBuilder(post, showAllContent)}</div>
+    </div>
     `;
-    }
+        div.appendChild(button);
+    };
+
     div.appendChild(button);
+    newbornSection.appendChild(titleElement);
     newbornSection.appendChild(div);
+
 }
 
 
