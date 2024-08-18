@@ -1,58 +1,70 @@
 import { api } from "./api/api.js";
-import { blogPostElement } from "./constants/constants.js";
+import { getAllPublishedPosts } from "./api/api.js";
 import { mediaApi } from "./api/api.js";
 
-async function getPosts() {
+let posts = [];
+let currentPage = 0;
+const postsPerPage = [12
+
+];
+
+async function fetchPosts() {
     try {
         const response = await fetch(api);
-        if (!response.ok) {
-            throw new Error('Oops! There was an error.');
-        }
-        const posts = await response.json();
-        createHTML(posts);
+        if (!response.ok) throw new Error('Ooops! Something went wrong...');
+        const data = await response.json();
+        posts = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        displayPosts();
     } catch (error) {
-        console.log(error);
-        if (blogPostElement) {
-            const errorDiv = document.createElement('div');
-            errorDiv.textContent = `Error: ${error.message}`;
-            errorDiv.style.color = 'red';
-            blogPostElement.appendChild(errorDiv);
-        }
+        console.error('Fetch error:', error);
     }
 }
 
-async function getThumbnail(mediaId) {
+async function fetchMedia() {
     try {
-        const response = await fetch(`${mediaApi}/${mediaId}`);
-        if (!response.ok) {
-            throw new Error('Error fetching thumbnail');
-        }
-        const media = await response.json();
-        return media.source_url;
+        const response = await fetch(mediaApi);
+        if (!response.ok) throw new Error('Ooops! Something went wrong...');
+        const data = await response.json();
+        posts = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        displayMedia();
     } catch (error) {
-        console.log(error);
-        return null;
+        console.error('Fetch error:', error);
     }
 }
 
-async function createHTML(posts) {
-    blogPostElement.className = "posts-content";
-    for (const post of posts) {
-        const thumbnailUrl = await getThumbnail(post.featured_media);
-        const div = document.createElement('div');
-        div.innerHTML = `<div>
-                            <h3>
-                                <a href="/blogspecific.html?id=${post.id}&title=${post.title}">
-                                    ${post.title.rendered}
-                                </a>
-                            </h3>
-                            <img src="${thumbnailUrl}" alt="Thumbnail">
-                            <p class="blogpost-infotext">${post.excerpt.rendered}</p>
-                        </div>`;
-        blogPostElement.appendChild(div);
-    }
+function displayMedia( => {
+    const mediaContainer = document.getElementById('media-container');
+    mediaContainer.className = 'card';
+    mediaContainer.innerHTML = '
+    < div class=
+    ';
+
+
+})
+
+function displayPosts() {
+    const postsContainer = document.getElementById('posts');
+    postsContainer.innerHTML = '';
+    const start = currentPage * postsPerPage;
+    const end = start + postsPerPage;
+    const pagePosts = posts.slice(start, end);
+
+    pagePosts.forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.className = 'card';
+        postElement.innerHTML = `
+            <div class="card-title">${post.title.rendered}</div>
+            <div class="card-title">${post.excerpt.rendered}</div>
+        `;
+        postElement.addEventListener('click', () => {
+            window.location.href = `blog.html?id=${post.id}`;
+        });
+        postsContainer.appendChild(postElement);
+    });
 }
 
-getPosts();
 
 
+
+
+fetchPosts();

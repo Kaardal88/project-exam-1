@@ -1,4 +1,5 @@
 import { api } from "./api/api.js";
+import { mediaApi } from "./api/api.js";
 
 let posts = [];
 let currentPage = 0;
@@ -36,6 +37,8 @@ function displayPosts() {
         postsContainer.appendChild(postElement);
     });
 }
+
+
 
 function prevPage() {
     if (currentPage > 0) {
