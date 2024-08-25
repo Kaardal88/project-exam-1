@@ -13,22 +13,54 @@
         rel="stylesheet">
     <link href="/css/carousel.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
+    <script src="/js/lightmode.js"></script>
     <script src="/js/blogposts.js" type="module" defer></script>
-    <script src="/js/blog.js" type="module" defer></script>
-    <script src="/js/carousel.js" type="module" defer></script>
+    <script src="/js/blog.js" defer></script>
 </head>
+<header>
+    <img class="blog-logo" src="/images/devbula-logo.svg" alt="Blog Logo">
+    <h3 class="header-h3"><i>Gain knowledge for new stuff</i></h3>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/blogposts.html">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
 <body>
-    <!-- <section id="posts-section" class="posts-container">
-        <div id="blog-post" class="posts-content"></div>
-    </section> -->
 
-    <div class="blog-container">
-        <h2 class="blog-content-info">BROWSE BLOGPOSTS</h2>
-        <div class="posts" id="posts"></div>
-        <div class="navigation">
-        </div>
+    <div class="light-mode" id="light-mode">
+        <button class="let-there-be-light" id="toggle-light-mode">Hit The Lights</button>
     </div>
+
+    <input class="browse-blogs" id="browse-blogs" type="text" placeholder="Search for blogs">
+
+    <div class="blog-items-container" id="blog-items-container">
+        <p id="error-handling"></p>
+    </div>
+
+    <button class="view-more-blogposts" id="view-more">View More</button>
+    <button class="view-less-blogposts"id="view-less">View Less</button>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-img">
+                    <img src="/images/devbula-logo.svg">
+                </div>
+                <div class="footer-info">
+                    <a href=""><p id="footer-p">Contact</p></a>
+                    <a href=""><p id="footer-p">About</p></a>
+                    <a href=""><p id="footer-p">Address</p></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
 </body>
 
 </html>

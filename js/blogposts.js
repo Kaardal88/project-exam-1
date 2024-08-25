@@ -1,70 +1,83 @@
 import { api } from "./api/api.js";
-import { getAllPublishedPosts } from "./api/api.js";
 import { mediaApi } from "./api/api.js";
 
+const container = document.getElementById('blog-items-container');
+const viewMoreButton = document.getElementById('view-more');
+const viewLessButton = document.getElementById('view-less');
+const errorElement = document.getElementById('error-handling');
 let posts = [];
-let currentPage = 0;
-const postsPerPage = [12
-
-];
+let currentIndex = 0;
+const increment = 10;
 
 async function fetchPosts() {
     try {
-        const response = await fetch(api);
-        if (!response.ok) throw new Error('Ooops! Something went wrong...');
-        const data = await response.json();
-        posts = data.sort((a, b) => new Date(b.date) - new Date(a.date));
-        displayPosts();
+        const response = await fetch(`${api}?per_page=100`);
+        if (!response.ok) throw new Error('Ooops! Something went wrong. Try again later:)');
+        posts = await response.json();
+        renderPosts();
     } catch (error) {
         console.error('Fetch error:', error);
+        errorElement.innerHTML = 'Ooops! Something went wrong. Try again later :)';
     }
 }
 
-async function fetchMedia() {
+async function featuredMedia(mediaId) {
     try {
-        const response = await fetch(mediaApi);
-        if (!response.ok) throw new Error('Ooops! Something went wrong...');
-        const data = await response.json();
-        posts = data.sort((a, b) => new Date(b.date) - new Date(a.date));
-        displayMedia();
+        const response = await fetch(`${mediaApi}/${mediaId}`);
+        const media = await response.json();
+        return media.source_url;
     } catch (error) {
         console.error('Fetch error:', error);
+        errorElement.innerHTML = 'Ooops! Something went wrong. Try again later :)';
     }
 }
 
-function displayMedia( => {
-    const mediaContainer = document.getElementById('media-container');
-    mediaContainer.className = 'card';
-    mediaContainer.innerHTML = '
-    < div class=
-    ';
+async function renderPosts() {
+    container.innerHTML = '';
+    const visiblePosts = posts.slice(0, currentIndex + increment);
 
+    for (const post of visiblePosts) {
+        const mediaUrl = await featuredMedia(post.featured_media);
 
-})
+        const postId = post.id;
+        const postTitle = encodeURIComponent(post.title.rendered);
+        const postSlug = post.slug;
+        const postUrl = `http://127.0.0.1:5500/blog.html?id=${postId}&title=${postTitle}&slug=${postSlug}`;
 
-function displayPosts() {
-    const postsContainer = document.getElementById('posts');
-    postsContainer.innerHTML = '';
-    const start = currentPage * postsPerPage;
-    const end = start + postsPerPage;
-    const pagePosts = posts.slice(start, end);
-
-    pagePosts.forEach(post => {
         const postElement = document.createElement('div');
-        postElement.className = 'card';
+        postElement.className = 'post';
         postElement.innerHTML = `
-            <div class="card-title">${post.title.rendered}</div>
-            <div class="card-title">${post.excerpt.rendered}</div>
-        `;
-        postElement.addEventListener('click', () => {
-            window.location.href = `blog.html?id=${post.id}`;
-        });
-        postsContainer.appendChild(postElement);
-    });
+            <h2><a href="${postUrl}">${post.title.rendered}</h2>
+            <img src="${mediaUrl ? mediaUrl : 'default-image.jpg'}" alt="Thumbnail">
+            <p>${post.excerpt.rendered}</p></a>`;
+        container.appendChild(postElement);
+    }
+
+    updateButtons();
 }
 
+function updateButtons() {
+    if (currentIndex + increment >= posts.length) {
+        viewMoreButton.style.display = 'none';
+    } else {
+        viewMoreButton.style.display = 'block';
+    }
 
+    if (currentIndex > 0) {
+        viewLessButton.style.display = 'block';
+    } else {
+        viewLessButton.style.display = 'none';
+    }
+}
 
+viewMoreButton.addEventListener('click', () => {
+    currentIndex += increment;
+    renderPosts();
+});
 
+viewLessButton.addEventListener('click', () => {
+    currentIndex = Math.max(currentIndex - increment, 0);
+    renderPosts();
+});
 
 fetchPosts();
