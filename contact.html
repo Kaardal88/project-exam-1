@@ -13,19 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="/css/contact.css" rel="stylesheet">
     <link href="/css/carousel.css" rel="stylesheet">
     <script src="/js/nextBtn.js" defer></script>
     <script src="/js/newborn.js" type="module" defer></script>
     <script src="/js/carousel.js" type="module" defer></script>
     <script src="/js/blog.js" type="module" defer></script>
     <script src="/js/lightmode.js"></script>
+    <script src="/js/contact.js" defer></script>
 </head>
 <header>
     <img class="blog-logo" src="/images/devbula-logo.svg" alt="Blog Logo">
     <h3 class="header-h3"><i>Gain knowledge for new stuff</i></h3>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/blogposts.html">Blog</a></li>
             <li><a href="#">About</a></li>
             <li><a href="/contact.html">Contact</a></li>
@@ -42,35 +44,50 @@
     <div class="hero">
         <div class="hero-content">
             <h1>
-                <div class="hero-text">Welcome to Devbula!<br>
-                    A blog for exploring and learning<br> about tech and development</div>
+                <div class="hero-text">
+                    Get in touch! 
+                </div>
             </h1>
         </div>
+        
     </div>
+    
+    <div class="get-in-touch">
+        <h3>We would love it if you shared your thoughts, insights or want to share your own project with us! </h3>
+        </div>
+
+    <form class="contact-form" id="form" action="/" method="GET">
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="fname" placeholder="Name">
+        <div id="name-error"></div>
+    
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Email" onkeyup="email-error">
+        <div id="email-error"></div>
+    
+        <label for="subject">Subject:</label>
+        <input id="subject" type="text" name="subject" placeholder="Subject">
+        <div id="subject-error"></div>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Message"></textarea>
+        <div id="message-error"></div>
+    
+        <input id="submit" type="submit" value="Submit">
+    </form>
+
+  
+
+        <div class="spinning-gears">
+        <img class="idea-gear-1" src="/images/ideagear.png" alt="image">
+        <img class="idea-gear-2" src="/images/ideagear.png" alt="image">
+        <img class="idea-gear-3" src="/images/ideagear.png" alt="image">
+        </div>
+    
+    
    
 
-    <section class="news">
-        <div class="news-title">
-        <h1>NewBorn Section</h1>
-        <h4><i>Our newest blogpost</i></h4>
-    </div>
-        <div class="news-content">
-            <div class="news-text" id="newborn-section">
-            </div>
-        </div>
-    </section>
-
-    <div class="blog-container">
-        <h2 class="blog-content-info">BROWSE BLOGPOSTS</h2>
-        <div class="posts" id="posts"></div>
-        <p id="error-handling"></p>
-        <div class="navigation">
-            <button class="button-p-n" id="prev">
-                < </button>
-                    <button class="button-p-n" id="next">></button>
-        </div>
-
-    </div>
+    
    
 
     <footer>

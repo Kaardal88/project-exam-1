@@ -42,7 +42,7 @@ async function renderPosts() {
         const postId = post.id;
         const postTitle = encodeURIComponent(post.title.rendered);
         const postSlug = post.slug;
-        const postUrl = `http://127.0.0.1:5500/blog.html?id=${postId}&title=${postTitle}&slug=${postSlug}`;
+        const postUrl = `blog.html?id=${postId}&title=${postTitle}&slug=${postSlug}`;
 
         const postElement = document.createElement('div');
         postElement.className = 'post';

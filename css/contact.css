@@ -1,0 +1,149 @@
+.contact-form {
+    width: 500px;
+    margin: 5% auto;
+    padding: 20px;
+    background-color: #6e7f80;
+    border-radius: 8px;
+
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #555555;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #0066c5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.get-in-touch {
+    background-color: #69A9B3;
+}
+
+
+@media (max-width: 800px) {
+    .contact-form {
+        width: 80%;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Spinning gears animation */
+
+.spinning-gears {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.idea-gear-1 {
+    width: 10%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.5s ease;
+}
+
+/* .idea-gear-1:hover {
+    animation: spin 2s infinite linear;
+} */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinReverse {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.idea-gear-2 {
+    width: 5%;
+    display: flex;
+    margin-left: 51%;
+    margin-right: auto;
+    margin-top: -2%;
+    transition: transform 0.5s ease;
+}
+
+.idea-gear-3 {
+    width: 7%;
+    display: flex;
+    margin-left: 48%;
+    margin-right: auto;
+    margin-top: -0.8%;
+    transition: transform 0.5s ease;
+}
+
+.idea-gear-2,
+.idea-gear-1,
+.idea-gear-3 {
+    animation: spin 15s infinite linear;
+}
+
+#name-error,
+#email-error,
+#subject-error,
+#message-error {
+    color: red;
+    background-color: white;
+}

@@ -83,6 +83,16 @@ a {
 
 }
 
+.get-in-touch {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -459,5 +469,14 @@ a {
     width: 90%;
     height: 100%;
 
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    position: relative;
 
 }
