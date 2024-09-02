@@ -1,0 +1,42 @@
+@media screen and (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .blog-logo {
+        width: 50%;
+        align-self: flex-start;
+    }
+
+    .header-h3 {
+        font-size: small;
+        align-self: flex-start;
+    }
+
+    .hero {
+        margin-top: 20%;
+    }
+
+    .hero-text {
+        font-size: large;
+    }
+
+    .news {
+        width: 95%;
+        height: auto;
+    }
+
+    .news-title {
+        font-size: small;
+    }
+
+    .news-content {
+        font-size: small;
+    }
+
+    .read-more-button {
+        font-size: small;
+    }
+
+}

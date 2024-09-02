@@ -3,15 +3,17 @@
     position: fixed;
     top: 0;
     z-index: 1000;
-    width: 100%;
+    width: 80%;
     height: 100%;
     overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 10%;
+    /* display: flex; */
+    cursor: pointer;
+
     background-color: #333;
 
 }
+
 
 #caption {
     margin: auto;
@@ -25,7 +27,8 @@
 
 .modal-content {
     display: block;
-    width: 80%;
+    width: 100%;
+    max-height: 100vh;
     cursor: pointer;
     align-self: center;
 }

@@ -1,6 +1,7 @@
 import { api } from "./api/api.js";
 import { mediaApi } from "./api/api.js";
 
+
 async function fetchPost(postId) {
     try {
         const response = await fetch(`${api}/${postId}`);
@@ -13,6 +14,8 @@ async function fetchPost(postId) {
             const media = await mediaResponse.json();
             post.imageUrl = media.source_url;
         }
+
+
 
         displayPost(post);
     } catch (error) {
@@ -33,7 +36,7 @@ function displayPost(post) {
         const imageElement = document.createElement('img');
         imageElement.src = post.imageUrl;
         imageElement.alt = post.title.rendered;
-        imageElement.classList.add('modal-content');
+
         postContainer.appendChild(imageElement);
     }
 

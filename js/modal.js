@@ -3,9 +3,9 @@ const closeModal = document.getElementById('close-modal');
 const modalImage = document.getElementById('big-modal-image');
 const captionText = document.getElementById('caption');
 
-function openModal(imageUrl, altText) {
+export function openModal(mediaUrl, altText) {
     imageModal.style.display = 'block';
-    modalImage.src = imageUrl;
+    modalImage.src = mediaUrl;
     captionText.innerHTML = altText;
 }
 
