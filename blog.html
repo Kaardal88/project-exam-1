@@ -13,12 +13,14 @@
         rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
     <link href="/css/carousel.css" rel="stylesheet">
+    <link href="/css/modal.css" rel="stylesheet">
     <script src="/js/nextBtn.js" defer></script>
     <script src="/js/newborn.js" type="module" defer></script>
     <script src="/js/carousel.js" type="module" defer></script>
     <script src="/js/blog.js" type="module" defer></script>
     <script src="/js/lightmode.js"></script>
-    <script src="/js/blogposts.js" defer></script>
+    <script src="/js/blogposts.js" type="module" defer></script>
+    <script src="/js/modal.js" defer></script>
 </head>
 <header>
     <img class="blog-logo" src="/images/devbula-logo.svg" alt="Blog Logo">
@@ -38,6 +40,12 @@
     </div>
     
     <div class="post-blog" id="post">
+    </div>
+
+    <div class="clickable-image" id="image-modal">
+        <span class="close-modal" id="close-modal">&times;</span>
+        <img class="modal-content" id="big-modal-image">
+        <div id="caption"></div>
     </div>
     
 

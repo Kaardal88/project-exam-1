@@ -114,7 +114,7 @@ body.light-mode .card {
     margin-right: auto;
     position: relative;
     cursor: pointer;
-    background-color: var(--color-primary);
+    background-color: #00698b;
     color: var(--color-button-text);
     border: none;
     border-radius: 7px;

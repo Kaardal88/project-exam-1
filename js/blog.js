@@ -33,6 +33,7 @@ function displayPost(post) {
         const imageElement = document.createElement('img');
         imageElement.src = post.imageUrl;
         imageElement.alt = post.title.rendered;
+        imageElement.classList.add('modal-content');
         postContainer.appendChild(imageElement);
     }
 
@@ -80,6 +81,7 @@ async function fetchPosts() {
 
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get('id');
+console.log(postId);
 const postTitle = urlParams.get('title');
 
 if (postId && postTitle) {

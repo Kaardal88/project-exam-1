@@ -42,6 +42,13 @@ async function displayPosts() {
         const postElement = document.createElement('div');
         postElement.className = 'card';
 
+        const postTitle = encodeURIComponent(post.title.rendered);
+        const postId = post.id;
+        const postUrl = `blog.html?id=${postId}&title=${postTitle}`;
+
+
+
+
         let mediaHtml = '';
         if (post.featured_media) {
             const mediaUrl = await fetchMedia(post.featured_media);
@@ -51,11 +58,11 @@ async function displayPosts() {
         }
 
         postElement.innerHTML = `
-            <a href="/blog.html?id=${post.id}">
-                ${mediaHtml}
-                <div class="card-title">${post.title.rendered}</div>
-                <div class="card-excerpt">${post.excerpt.rendered}</div>
-            </a>
+            <h2><a href="${postUrl}"></h2>
+        ${mediaHtml}
+        <h2>${post.title.rendered}</h2>
+        <div>${post.excerpt.rendered}</div>
+    </a>
         `;
 
         postsContainer.appendChild(postElement);

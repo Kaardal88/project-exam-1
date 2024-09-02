@@ -270,11 +270,7 @@ body.light-mode .news {
     width: 80%;
     font-size: 1.1em;
     position: sticky;
-
-    /* text-align: left; */
     color: var(--color-text);
-    /* margin-left: auto;
-margin-right: auto; */
     padding-bottom: 3%;
 
 }
@@ -324,7 +320,7 @@ body.light-mode .news-text {
     align-items: center;
     color: var(--color-text);
     font-size: xx-large;
-    background-color: #6e7f80;
+    background-color: #3a4546;
     border-radius: 8px 8px 0 0;
 }
 
@@ -335,7 +331,7 @@ body.light-mode .news-text {
 }
 
 .read-more-button {
-    background-color: var(--color-primary);
+    background-color: #00698b;
     color: var(--color-text);
     padding: 1em 2em;
     border: none;
@@ -347,9 +343,9 @@ body.light-mode .news-text {
 }
 
 .read-more-button:hover {
-    background-color: #ca793b;
-    transform: scale(1.1);
-    transition: 0.5s;
+    background-color: #0c86af;
+    transform: scale(1.05);
+    transition: 0.2s;
 
 }
 
