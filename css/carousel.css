@@ -138,15 +138,31 @@ body.light-mode .button-p-n {
 
 @media screen and (max-width: 1200px) {
     .card {
-        width: 100%;
+        width: 35em;
+        max-height: 45em;
     }
 
     .blog-container {
-        width: 100%;
+        width: 95%;
+
     }
 
     .button-p-n {
         position: relative;
         margin-top: 15%;
+        font-size: small;
+
+    }
+
+    .blog-content-info {
+        font-size: medium;
+    }
+
+    .card-infotext {
+        font-size: x-small;
+    }
+
+    .card-h2 {
+        font-size: small;
     }
 }

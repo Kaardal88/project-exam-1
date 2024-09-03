@@ -114,6 +114,12 @@ nav ul li a {
 
 }
 
+.hamburger-menu {
+    display: none;
+}
+
+.bar {}
+
 body.light-mode nav ul li a {
     color: var(--color-link-light);
 }
@@ -420,15 +426,16 @@ a {
 }
 
 .post-blog {
-    max-width: 50%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4%;
+    margin-top: 10%;
     border: var(--color-primary);
     cursor: pointer;
     background-color: #333;
+    border-radius: 10px;
 }
 
 .post-blog p,

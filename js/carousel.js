@@ -60,8 +60,8 @@ async function displayPosts() {
         postElement.innerHTML = `
             <h2><a href="${postUrl}"></h2>
         ${mediaHtml}
-        <h2>${post.title.rendered}</h2>
-        <div>${post.excerpt.rendered}</div>
+        <h2 class="card-h2">${post.title.rendered}</h2>
+        <div class="card-infotext">${post.excerpt.rendered}</div>
     </a>
         `;
 
