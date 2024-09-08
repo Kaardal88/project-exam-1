@@ -62,6 +62,18 @@
         margin-top: 15%;
     }
 
+    .blog-items-container {
+        grid-template-columns: 1fr;
+
+
+        margin-top: 20px;
+    }
+
+    .blog-container-blogposts {
+        padding: 10px;
+
+    }
+
 
 
 
