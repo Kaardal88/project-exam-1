@@ -12,33 +12,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="/css/carousel.css" rel="stylesheet">
-    <link href="/css/mobile.css" rel="stylesheet">
-    <script src="/js/nextBtn.js" defer></script>
-    <script src="/js/newborn.js" type="module" defer></script>
-    <script src="/js/carousel.js" type="module" defer></script>
-    <script src="/js/blog.js" type="module" defer></script>
-    <script src="/js/lightmode.js"></script>
+        <link  href="/css/styles.css" rel="stylesheet">
+        <link href="/css/carousel.css" rel="stylesheet">
+        <link href="/css/mobile.css" rel="stylesheet">
+        <link href="/css/loader.css" rel="stylesheet">
+        <link href="/css/mobilenav.css" rel="stylesheet">
+        <script src="/js/nextBtn.js" defer></script>
+        <script src="/js/newborn.js" type="module" defer></script>
+        <script src="/js/carousel.js" type="module" defer></script>
+        <script src="/js/blog.js" type="module" defer></script>
+        <script src="/js/lightmode.js"></script>
+        <script src="/js/heroscroll.js" defer></script>
+        <script src="/js/loader.js" defer></script>
+        <script src="/js/mobileMenu.js" defer></script>
 </head>
 <header>
     <img class="blog-logo" src="/images/devbula-logo.svg" alt="Blog Logo">
-    <h3 class="header-h3"><i>Gain knowledge for new stuff</i></h3>
+    
     <nav>
+    
+        
+        
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="/blogposts.html">Blog</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="/about.html">About</a></li>
             <li><a href="/contact.html">Contact</a></li>
         </ul>
-
+        
+    
     </nav>
-    <button class="hamburger-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </button>
+    <div class="mobile-nav">
+        <div class="menu-icon" onclick="toggleMobileMenu()">☰</div>
+        <ul class="mobile-nav-list" id="mobile-nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="/blogposts.html">Blog</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    
+  
 </header>
+
+
 
 <body>
 
@@ -46,12 +63,33 @@
         <button class="let-there-be-light" id="toggle-light-mode">Hit The Lights</button>
     </div> -->
 
-    <div class="hero">
+    <div class="hero" id="hero">
+        
         <div class="hero-content">
-            <h1>
-                <div class="hero-text">Welcome to Devbula!<br>
-                    A blog for exploring and learning<br> about tech and development</div>
-            </h1>
+            
+                <div class="hero-text">
+                    <h1 id="text-1">Welcome to Devbula</h1>
+                    <h1 id="text-2">A place for learning...</h1>
+                    <h1 id="text-3">A place for teaching...</h1>
+                    <h1 id="text-4">A place for knowledge!</h1>
+                </div>
+                    
+                        
+                    
+            
+        </div>
+        <div class="hero-image-container"><img class="hero-image" src="/images/SL_101619_24150_09.jpg" alt="Hero Image"></div>
+        
+       
+        
+    </div>
+
+    <div class="info-content">
+        <div class="devbula-info">
+            <h2>This is where tech, development, and curiosity collide! 🚀 Here, we dive into the latest trends in technology, explore the ins and outs of development, and satisfy our collective curiosity about what’s shaping the future. Expect a mix of deep dives, practical tips, and a dash of wonder as we explore the ever-evolving tech landscape. Whether you’re a seasoned pro or just starting out, there’s something here for everyone. So, grab a coffee, get comfortable, and let’s embark on this tech journey together! 💻✨</h2>
+        </div>
+        <div class="info-image">
+            <img src="/images/infoimage.png" alt="ideagear.png">
         </div>
     </div>
    
@@ -61,15 +99,22 @@
         <h1>newBorn Presentations</h1>
         <h4><i>Our newest blogpost</i></h4>
     </div>
+    
         <div class="news-content">
+            
             <div class="news-text" id="newborn-section">
+                <div class="loader-container">
+                    <div class="loader"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <div class="blog-container">
         <h2 class="blog-content-info">BROWSE BLOGPOSTS</h2>
-        <div class="posts" id="posts"></div>
+        <div class="posts" id="posts"><div class="loader-container">
+            <div class="loader"></div>
+        </div></div>
         <p id="error-handling"></p>
         <div class="navigation">
             <button class="button-p-n" id="prev">
