@@ -19,13 +19,6 @@ html {
     --color-button-bg: rgba(0, 0, 0, 0.5);
     --color-button-text: white;
 
-    /* Light Mode Colors */
-    --color-background-light: white;
-    --color-text-light: black;
-    --color-link-light: #333;
-    --color-button-bg-light: #f0f0f0;
-    --color-button-text-light: black;
-
     /* Font Families */
     --font-family: "kanit",
         sans-serif;
@@ -45,14 +38,6 @@ body {
     color: var(--color-text);
     transition: background-color 0.3s, color 0.3s;
 }
-
-/* --Lightmode-- */
-
-body.light-mode {
-    background-color: var(--color-background-light);
-    color: var(--color-text-light);
-}
-
 
 header {
     display: flex;
@@ -74,11 +59,6 @@ nav {
 
 }
 
-
-
-header.light-mode {
-    color: var(--color-text-light);
-}
 
 
 a {
@@ -197,19 +177,15 @@ nav ul li a {
 
 
 
-body.light-mode nav ul li a {
+/* body.light-mode nav ul li a {
     color: var(--color-link-light);
-}
+} */
 
 .header-h3 {
     font-size: 1.5em;
     margin-top: -1%;
     margin-bottom: 2%;
     color: rgba(255, 255, 255, 0.507);
-}
-
-body.light-mode .header-h3 {
-    color: rgba(0, 0, 0, 0.6);
 }
 
 .blog-logo {
@@ -334,13 +310,6 @@ body.light-mode .header-h3 {
 }
 
 
-body.light-mode .hero-text {
-    -webkit-text-fill-color: var(--color-text-light);
-    -webkit-background-clip: initial;
-    background: none;
-}
-
-
 .carousel {
     display: flex;
     overflow: hidden;
@@ -417,10 +386,6 @@ body.light-mode .hero-text {
 
 }
 
-body.light-mode .news {
-    color: var(--color-text-light);
-}
-
 .news-content {
     display: flex;
     align-items: center;
@@ -437,12 +402,6 @@ body.light-mode .news {
     padding-bottom: 3%;
 
 }
-
-body.light-mode .news-text {
-    color: var(--color-text-light);
-}
-
-
 
 .news img {
     max-width: 100%;
@@ -532,10 +491,6 @@ footer {
 
 }
 
-body.light-mode footer {
-    background-color: lightblue;
-}
-
 .footer-content {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -565,34 +520,9 @@ body.light-mode footer {
 
 }
 
-body.light-mode #footer-p {
-    color: var(--color-text-light);
-}
-
 a {
     text-decoration: none;
 
-}
-
-.let-there-be-light {
-    padding: 1em 1em;
-    color: var(--color-text);
-    background-color: var(--color-secondary);
-    border: none;
-    border-radius: 7px;
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: 2%;
-    margin-top: -10%;
-    cursor: pointer;
-    font-size: large;
-
-
-}
-
-.light-mode {
-    padding-bottom: 10%;
 }
 
 .post-blog {
