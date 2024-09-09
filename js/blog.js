@@ -50,7 +50,7 @@ function displayPost(post) {
 }
 
 function displayPostList(posts) {
-    const postListContainer = document.getElementById('post-list');
+    const postListContainer = document.getElementById('post');
     postListContainer.innerHTML = '';
 
     posts.forEach(post => {
@@ -84,7 +84,6 @@ async function fetchPosts() {
 
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get('id');
-console.log(postId);
 const postTitle = urlParams.get('title');
 
 if (postId && postTitle) {
