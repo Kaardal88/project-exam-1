@@ -3,6 +3,7 @@ const email = document.getElementById('email');
 const subject = document.getElementById('subject');
 const message = document.getElementById('message');
 const form = document.getElementById('form');
+const success = document.getElementById('submit-success');
 
 const nameError = document.getElementById('name-error');
 const emailError = document.getElementById('email-error');
@@ -23,6 +24,8 @@ email.addEventListener('input', () => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    success.style.display = 'none';
 
     nameError.innerText = '';
     emailError.innerText = '';
@@ -60,7 +63,17 @@ form.addEventListener('submit', (e) => {
         isValid = false;
     }
 
+
+
     if (isValid) {
-        console.log('Form is valid and ready for submission');
+        /* success.innerText = 'Form submitted successfully!'; */
+        success.style.display = 'block';
+
+        // Tøm alle feltene
+        fname.value = '';
+        email.value = '';
+        subject.value = '';
+        message.value = '';
+
     }
 });

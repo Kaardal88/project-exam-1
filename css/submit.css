@@ -1,0 +1,19 @@
+.submit-success {
+    display: none;
+    background-image: linear-gradient(45deg, #2ecc71, yellow);
+    width: 100%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+    margin-top: -3%;
+    margin-bottom: 3%
+}
+
+#success-home {
+    color: black;
+    text-decoration: underline;
+}
