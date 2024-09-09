@@ -552,8 +552,6 @@ body.light-mode footer {
 
 .footer-info {
     display: column;
-    justify-self: start;
-    gap: 10px;
     grid-row: 2;
     grid-column: 2;
 
@@ -562,6 +560,9 @@ body.light-mode footer {
 
 #footer-p {
     color: var(--color-text);
+    padding-right: 50px;
+    padding-bottom: 50px;
+
 }
 
 body.light-mode #footer-p {
@@ -700,4 +701,16 @@ form {
 
 .info-image img {
     width: 100%;
+}
+
+.about-container {
+    width: 100vw;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    font-size: 1.6rem;
+    line-height: 1.3em;
+
+
 }
