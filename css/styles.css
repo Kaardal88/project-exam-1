@@ -569,12 +569,13 @@ h1 {
 
 .blog-container-blogposts {
     width: 100%;
-    max-width: 1200px;
+    max-width: 2000px;
     height: auto;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     padding: 20px;
+    margin-top: 15%;
 
 }
 
@@ -582,7 +583,7 @@ h1 {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 10%;
+    /*  margin-top: 10%; */
     width: 100%;
     flex-wrap: wrap;
     display: flex;

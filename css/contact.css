@@ -74,6 +74,15 @@
     .contact-form input[type="submit"] {
         width: 100%;
     }
+
+    .contact-form {
+        margin-bottom: 10%;
+        margin-top: 50%;
+    }
+
+    .get-in-touch {
+        margin-top: 25%;
+    }
 }
 
 /* Spinning gears animation */

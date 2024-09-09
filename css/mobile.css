@@ -68,7 +68,7 @@
 
         height: 15%;
         bottom: 0;
-        position: fixed;
+
         background-color: #333;
         width: 100%;
 
@@ -84,7 +84,7 @@
         grid-template-columns: 1fr;
 
 
-        margin-top: 20%;
+        margin-top: 30%;
     }
 
     .blog-container-blogposts {
@@ -100,7 +100,7 @@
 
     .contact-form {
         margin-bottom: 10%;
-        margin-top: 5%;
+        margin-top: 15%;
         ;
     }
 
@@ -110,6 +110,8 @@
     header {
         position: fixed;
         background-color: #333;
+        top: 0;
+        z-index: 1200;
 
     }
 

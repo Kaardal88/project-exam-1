@@ -1,6 +1,6 @@
 import { api } from "./api/api.js";
 import { mediaApi } from "./api/api.js";
-const errorElement = document.getElementById('error-handling');
+import { errorElement } from "./constants/error.js";
 
 let posts = [];
 let currentPage = 0;
@@ -15,6 +15,7 @@ async function fetchPosts() {
         displayPosts();
     } catch (error) {
         console.error('Fetch error:', error);
+        errorElement.classList.add('errorVisible');
         errorElement.innerHTML = 'Ooops! Something went wrong. Try again later :)';
     }
 }

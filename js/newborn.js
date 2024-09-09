@@ -1,22 +1,16 @@
 import { getLatestPost } from "./api/api.js";
 import { mediaApi } from "./api/api.js";
 import { newbornSection } from "./constants/constants.js";
+import { errorElement } from "./constants/error.js";
 
 async function newbornArticle() {
     try {
         const post = await getLatestPost();
-        if (!post) {
-            throw new Error('Oops! There was an error.');
-        }
         createHTML(post);
     } catch (error) {
-        console.log(error);
-        if (newbornSection) {
-            const errorDiv = document.createElement('div');
-            errorDiv.textContent = `Error: ${error.message}`;
-            errorDiv.style.color = 'red';
-            newbornSection.appendChild(errorDiv);
-        }
+        console.error('Fetch error:', error);
+        errorElement.classList.add('errorVisible');
+        errorElement.innerHTML = 'Ooops! Something went wrong. Try again later :)';
     }
 }
 
@@ -29,8 +23,9 @@ async function getThumbnail(mediaId) {
         const media = await response.json();
         return media.guid.rendered;
     } catch (error) {
-        console.log(error);
-        return null;
+        console.error('Fetch error:', error);
+        errorElement.classList.add('errorVisible');
+        errorElement.innerHTML = 'Ooops! Something went wrong. Try again later :)';
     }
 }
 

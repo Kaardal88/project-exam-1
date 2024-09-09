@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
         <link  href="/css/styles.css" rel="stylesheet">
+        <link  href="/css/error.css" rel="stylesheet">
         <link href="/css/carousel.css" rel="stylesheet">
         <link href="/css/mobile.css" rel="stylesheet">
         <link href="/css/loader.css" rel="stylesheet">
@@ -28,6 +29,7 @@
         <script src="/js/heroscroll.js" defer></script>
         <script src="/js/loader.js" defer></script>
         <script src="/js/mobileMenu.js" defer></script>
+        <script src="/js/error.js" defer></script>
         <!-- Hotjar Tracking Code for https://devbula.netlify.app/ -->
 <script>
     (function(h,o,t,j,a,r){
@@ -106,10 +108,10 @@
 
     <section class="news">
         <div class="news-title">
+            <p id="error-handling"></p>
         <h1>newBorn Presentations</h1>
         <h4><i>Our newest blogpost</i></h4>
     </div>
-    
         <div class="news-content">
             
             <div class="news-text" id="newborn-section">
@@ -118,13 +120,16 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <div class="blog-container">
         <h2 class="blog-content-info">BROWSE BLOGPOSTS</h2>
-        <div class="posts" id="posts"><div class="loader-container">
+        <div class="posts" id="posts">
+            <div class="loader-container">
             <div class="loader"></div>
-        </div></div>
+        </div>
+        </div>
         <p id="error-handling"></p>
         <div class="navigation">
             <button class="button-p-n" id="prev">
