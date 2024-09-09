@@ -1,8 +1,14 @@
-function toggleMobileMenu() {
-    const mobileNavList = document.getElementById('mobile-nav-list');
-    if (mobileNavList.style.display === 'block') {
-        mobileNavList.style.display = 'none';
-    } else {
-        mobileNavList.style.display = 'block';
+
+
+const menuButton = document.querySelector('#menu-button')
+const mobileNavList = document.querySelector('#mobile-nav-list')
+
+menuButton.addEventListener('click', () => {
+    mobileNavList.classList.toggle('hide');
+})
+
+document.addEventListener('click', e => {
+    if (!mobileNavList.contains(e.target) && e.target !== menuButton) {
+        mobileNavList.classList.add('hide')
     }
-}
+})
