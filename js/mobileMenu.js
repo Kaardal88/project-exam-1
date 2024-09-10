@@ -18,6 +18,7 @@ document.addEventListener('click', e => {
     if (!mobileNavList.contains(e.target) && e.target !== menuButton) {
         mobileNavList.classList.add('hide');
         menuButton.textContent = '☰';
+        blury.classList.remove('blur');
     }
 });
 
