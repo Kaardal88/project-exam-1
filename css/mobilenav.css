@@ -53,6 +53,7 @@
     font-size: xx-large;
     cursor: pointer;
     z-index: 1400;
+    position: fixed;
 }
 
 
