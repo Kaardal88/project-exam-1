@@ -54,8 +54,12 @@
     cursor: pointer;
     z-index: 1400;
     position: fixed;
+    display: none;
 }
 
+.menu-icon.cross::after {
+    content: "✖";
+}
 
 
 .mobile-nav-list li {

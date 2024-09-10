@@ -39,6 +39,14 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* .blury {
+    transition: filter 0.3s ease;
+} */
+
+.blur {
+    filter: blur(5px);
+}
+
 header {
     display: flex;
 
@@ -81,6 +89,12 @@ a {
 
 }
 
+.active {
+    font-size: x-large;
+    color: #121212;
+    text-decoration: underline;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -105,7 +119,6 @@ nav ul:hover {
 }
 
 
-
 nav ul li {
     margin: 0 10px;
 }
@@ -121,7 +134,8 @@ nav ul li a {
 }
 
 .nav-2 li a:hover {
-    background-color: #333;
+    background-color: #69A9B3;
+
 
 }
 
@@ -364,12 +378,15 @@ nav ul li a {
     }
 
     .info-image {
-        display: none;
+        width: 60%;
+
     }
+
+
 
     .devbula-info h2 {
 
-        padding: 15px;
+        padding-left: 5px;
         font-size: small;
     }
 
@@ -603,35 +620,27 @@ form {
 
 .info-content {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    height: 500px;
 
-    margin-left: auto;
-    margin-right: auto;
-
-
-
-    visibility: hidden;
-    transition: opacity 0.5s ease-in;
-
-
-
+    background-color: #333;
 }
 
-.devbula-info h2 {
-    margin-top: 20%;
-    width: 100%;
-
-
-
-
-
-
-
+.devbula-info {
+    width: 50%;
+    padding-left: 10%;
 }
 
 .info-image img {
+    display: flex;
+    max-width: 750px;
     width: 100%;
+
+    height: 90%;
+    padding-right: 30%;
+
 }
 
 .about-container {
