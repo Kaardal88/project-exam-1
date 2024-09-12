@@ -500,7 +500,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #333;
+    background-image: linear-gradient(45deg, #333, #858585);
     bottom: 0;
     width: 100%;
     height: 30%;
@@ -630,8 +630,9 @@ form {
     justify-content: space-between;
     width: 100%;
     height: 500px;
+    background-image: linear-gradient(45deg, #00698b, #48cbf7);
 
-    background-color: #333;
+    background-color: #00698b;
 }
 
 .devbula-info {
@@ -650,13 +651,70 @@ form {
 }
 
 .about-container {
-    width: 100vw;
-    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(45deg, #00698b, #46b3d8);
+    margin-top: 15%;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-text-area {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-area {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-area img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 0 40px 2px rgb(41, 41, 41);
+
+}
+
+.some {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
-    font-size: 1.6rem;
-    line-height: 1.3em;
+    width: 50%;
+    height: 50vh;
+    gap: 100px;
+    padding: 0;
+}
 
+.some img {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
 
+.some a {
+    text-decoration: none;
+}
+
+.spacerocket {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
 }

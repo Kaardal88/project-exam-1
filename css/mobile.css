@@ -93,16 +93,6 @@
 
     }
 
-    .about-container {
-        max-width: 90vw;
-        font-size: 1em;
-        margin-top: 50%;
-    }
-
-
-
-
-
     header {
         position: fixed;
         background-color: #333;
@@ -111,12 +101,45 @@
 
     }
 
+    .about-container {
 
+        margin-top: 50%;
 
+    }
 
+    .about-content {
+        flex-direction: column;
+    }
 
+    .about-text-area,
+    .image-area {
+        flex: none;
+        width: 100%;
+        padding: 10px;
+    }
 
+    .image-area img {
+        max-width: 100%;
+    }
 
+    .some h2 {
+        font-size: small;
+    }
 
+    .some {
+        width: 50%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* align-self: center; */
+        margin: 0 auto;
+        gap: 5px;
+    }
 
+    .some img {
+        width: 100%;
+        margin-top: 20%;
+
+    }
 }
