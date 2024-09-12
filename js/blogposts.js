@@ -30,7 +30,7 @@ async function featuredMedia(mediaId) {
         return media.source_url;
     } catch (error) {
         console.error('Fetch error:', error);
-        return null;
+        errorElement.innerHTML = 'Ooops! Something went wrong. Try again later :)';
     }
 }
 

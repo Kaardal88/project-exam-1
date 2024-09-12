@@ -584,6 +584,13 @@ h1 {
 
 }
 
+
+
+
+
+
+
+
 .blog-container-blogposts {
     width: 100%;
     max-width: 2000px;
@@ -597,16 +604,15 @@ h1 {
 }
 
 .blog-items-container {
-    display: grid;
-    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /*  margin-top: 10%; */
+    margin-top: 10%;
     width: 100%;
     flex-wrap: wrap;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+    gap: 20px;
 }
 
 form {

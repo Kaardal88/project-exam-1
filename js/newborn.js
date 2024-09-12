@@ -45,7 +45,6 @@ function contentBuilder(post, showAll) {
 }
 
 async function appendPostToSection(post) {
-    console.log(post);
 
     const titleElement = document.createElement('h2');
 
