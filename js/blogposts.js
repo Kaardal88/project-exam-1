@@ -10,6 +10,8 @@ let currentIndex = 0;
 const increment = 10;
 let isFetching = false;
 
+
+
 async function fetchPosts() {
     try {
         const response = await fetch(`${api}?per_page=30`);

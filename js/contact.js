@@ -66,10 +66,8 @@ form.addEventListener('submit', (e) => {
 
 
     if (isValid) {
-        /* success.innerText = 'Form submitted successfully!'; */
         success.style.display = 'block';
 
-        // Tøm alle feltene
         fname.value = '';
         email.value = '';
         subject.value = '';

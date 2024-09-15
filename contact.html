@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with us. Want to share your project, story or just say something in general? We would like to hear from you no matter what!">
+    <meta name="description"
+        content="Get in touch with us. Want to share your project, story or just say something in general? We would like to hear from you no matter what!">
     <meta name="author" content="Kim-Andre Kårdal">
     <title>Devbula | Contact</title>
     <link rel="icon" type="image/x-icon" href="/images/devbula-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -24,108 +23,90 @@
     <script src="/js/contact.js" defer></script>
     <script src="/js/mobileMenu.js" defer></script>
     <!-- Hotjar Tracking Code for https://devbula.netlify.app/ -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5127676,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 5127676, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 <header>
     <nav class="nav-2">
         <a class="logo-not-hover" href="/index.html">
             <img class="blog-logo-nav-2" src="/images/devbula-logo.svg" alt="Blog Logo"></a>
-        
         <ul class="ul-2">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/blogposts.html">Blog</a></li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/contact.html" class="active">Contact</a></li>
         </ul>
-        
-
     </nav>
-
     <div class="menu-icon" id="menu-button">☰</div>
     <div class="mobile-nav hide" id="mobile-nav">
-       
         <ul class="mobile-nav-list hide" id="mobile-nav-list">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/blogposts.html">Blog</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/blogposts.html">Blog</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
-      </div>
+    </div>
 </header>
 
 <body>
-
-  
-        
-    <main id="blury"> 
-    
-    <div class="get-in-touch">
-        <h3>We would love it if you shared your thoughts, insights or want to share your own project with us! </h3>
+    <main id="blury">
+        <div class="get-in-touch">
+            <h3>We would love it if you shared your thoughts, insights or want to share your own project with us! </h3>
         </div>
+        <form class="contact-form" id="form" action="/" method="GET">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="fname" placeholder="Name">
+            <div id="name-error"></div>
 
-    <form class="contact-form" id="form" action="/" method="GET">
-        <label for="name">Name:</label>
-        <input id="name" type="text" name="fname" placeholder="Name">
-        <div id="name-error"></div>
-    
-        <label for="email">Email:</label>
-        <input id="email" type="email" name="email" placeholder="Email">
-        <div id="email-error"></div>
-    
-        <label for="subject">Subject:</label>
-        <input id="subject" type="text" name="subject" placeholder="Subject">
-        <div id="subject-error"></div>
-    
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Message"></textarea>
-        <div id="message-error"></div>
-    
-        <input id="submit" type="submit" value="Submit">
-        <img class="spacerocket" src="/images/rocket-space-concept-success-ai-generated.jpg" alt="space rocket illustration">
-    </form>
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Email">
+            <div id="email-error"></div>
 
-    <div class="submit-success" id="submit-success">Thank you for your time! You will receive an email shortly. Take me back <span><a id="success-home" href="/index.html">Home</a></span>
-    </div>
-    
+            <label for="subject">Subject:</label>
+            <input id="subject" type="text" name="subject" placeholder="Subject">
+            <div id="subject-error"></div>
 
-  
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Message"></textarea>
+            <div id="message-error"></div>
 
+            <input id="submit" type="submit" value="Submit">
+            <img class="spacerocket" src="/images/rocket-space-concept-success-ai-generated.jpg"
+                alt="space rocket illustration">
+        </form>
+        <div class="submit-success" id="submit-success">Thank you for your time! You will receive an email shortly. Take
+            me back <span><a id="success-home" href="/index.html">Home</a></span>
+        </div>
         <div class="spinning-gears">
-        <img class="idea-gear-1" src="/images/ideagear.png" alt="image">
-        <img class="idea-gear-2" src="/images/ideagear.png" alt="image">
-        <img class="idea-gear-3" src="/images/ideagear.png" alt="image">
+            <img class="idea-gear-1" src="/images/ideagear.png" alt="image">
+            <img class="idea-gear-2" src="/images/ideagear.png" alt="image">
+            <img class="idea-gear-3" src="/images/ideagear.png" alt="image">
         </div>
     </main>
-    
-   
-
-    
-   
-
     <footer>
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-img">
-                    <img src="/images/devbula-logo.svg">
+                    <img src="/images/devbula-logo.svg" alt="blog logo">
                 </div>
                 <div class="footer-info">
-                    <a href="/blogposts.html"><p id="footer-p">Read Blogs</p></a>
-                    <a href="/about.html"><p id="footer-p">About</p></a>
+                    <a href="/blogposts.html">
+                        <p id="footer-p">Read Blogs</p>
+                    </a>
+                    <a href="/about.html">
+                        <p id="footer-p">About</p>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
-
-
 </body>
-
 </html>

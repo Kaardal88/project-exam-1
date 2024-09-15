@@ -39,19 +39,13 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* .blury {
-    transition: filter 0.3s ease;
-} */
-
 .blur {
     filter: blur(5px);
 }
 
 header {
     display: flex;
-
     justify-content: space-between;
-
     padding: 10px 20px;
     color: var(--color-text);
     width: 100%;
@@ -91,7 +85,7 @@ a {
 
 .active {
     font-size: x-large;
-    color: #121212;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -103,7 +97,6 @@ nav ul {
     margin-top: 22%;
     margin-right: 10%;
     align-self: bottom;
-
     padding-bottom: 10%;
     border-radius: 8px;
     background-image: linear-gradient(45deg, #00698b, #EB9049);
@@ -188,12 +181,6 @@ nav ul li a {
 .hamburger-menu {
     display: none;
 }
-
-
-
-/* body.light-mode nav ul li a {
-    color: var(--color-link-light);
-} */
 
 .header-h3 {
     font-size: 1.5em;
@@ -393,14 +380,6 @@ nav ul li a {
     .nav-2 ul {
         display: none;
     }
-
-
-
-
-
-
-
-
 }
 
 .news-content {
@@ -584,13 +563,6 @@ h1 {
 
 }
 
-
-
-
-
-
-
-
 .blog-container-blogposts {
     width: 100%;
     max-width: 2000px;
@@ -605,7 +577,7 @@ h1 {
 
 .blog-items-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 10%;
+    margin-top: 15%;
     width: 100%;
     flex-wrap: wrap;
     display: flex;
